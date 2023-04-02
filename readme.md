@@ -35,7 +35,9 @@
    * Dijkstra algorithm 
    * Kahn's algorithm
    * Union Find algorithm
-   * Finding Cycles in graph 
+   * Finding Cycles in graph
+        - [dfs algorithm for undirected graphs](/Notes/Graphs/cycle_dfs_bfs_undirected.md)
+        - [bfs algorithm for undirected graphs]()
    * Bipartite Graph(Graph Coloring)
 
 * __Tree Algorthims__
