@@ -31,7 +31,7 @@
    * Minimum Spanning Tree algorithm  
         - Prims algorithm
         - Krushkals algorithm
-   * Topological Sort 
+   * [Topological Sort](Notes/Graphs/topologicalsort.md) 
    * Dijkstra algorithm 
    * Kahn's algorithm
    * Union Find algorithm
