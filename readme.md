@@ -23,8 +23,8 @@
 * __Graph Algorithms__
    * [Graph Representation](Notes/Graphs/graphrepresentation.md)
    * BFS and DFS algorithms
-        * Iterative
-        * Recursive
+        * [bfs](Notes/Graphs/bfsalgorithms.md)
+        * dfs
    * Bellman Ford algorithm
    * Connected Components algorithm
    * Floyd Marshall algorithm
