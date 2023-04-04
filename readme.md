@@ -33,7 +33,7 @@
         - Krushkals algorithm
    * [Topological Sort](Notes/Graphs/topologicalsort.md) 
    * Dijkstra algorithm 
-   * Kahn's algorithm
+   * [Kahn's algorithm](Notes/Graphs/Khan'sAlgoritm.md)
    * Union Find algorithm
    * Finding Cycles in graph
         - [dfs algorithm for undirected graphs](/Notes/Graphs/cycle_dfs_bfs_undirected.md)
