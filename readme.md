@@ -12,7 +12,7 @@
    * Radix Sort
    * Counting Sort
   
-* __String Algorithms_
+* __String Algorithms__
    
    * Knuth-Morris-Pratt (KMP) algorithm for pattern matching
    * Rabin-Karp algorithm for pattern matching
