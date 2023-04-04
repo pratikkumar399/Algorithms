@@ -54,4 +54,6 @@
  8.  Heap
  9.  Hash
 
+### [ Git and cmd notes](/Notes/GitNotes/)
+  * [Git notes](/Notes/GitNotes/gitnotes.md)
 
