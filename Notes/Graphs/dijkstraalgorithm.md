@@ -31,9 +31,8 @@ public:
         // where dist is the distance from source to the node. 
         priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
 
-        // Initialising distTo list with a large number to
-        // indicate the nodes are unvisited initially.
-        // This list contains distance from source to the nodes.
+        // initialize the vector with max distance from source , so that 
+        // initailly they are univisted 
         vector<int> distTo(V, INT_MAX);
 
         // Source initialised with dist=0.
