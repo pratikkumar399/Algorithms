@@ -41,6 +41,13 @@
    * Bipartite Graph(Graph Coloring)
 
 * __Tree Algorthims__
+  * [Tree Implementation](/Notes/Trees/binarytree.md)
+  * Traversals
+    * [Inorder Traversal](/Notes/Trees/Traversals/inordertraversal.md)
+    * [PreOrder Traversal](/Notes/Trees/Traversals/preordertraversal.md)
+    * [PostOrder Traversal](/Notes/Trees/Traversals/postordertraversal.md)
+    * [LevelOrder Traversal](/Notes/Trees/Traversals/levelordertraversal.md) 
+
    
 
 ## Data Structures 
