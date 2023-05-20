@@ -39,6 +39,7 @@
         - [dfs algorithm for undirected graphs](/Notes/Graphs/cycle_dfs_bfs_undirected.md)
         - [bfs algorithm for undirected graphs]()
    * Bipartite Graph(Graph Coloring)
+   * [Arrival Departure Time](/Notes/Graphs/arrival_departure_time.md)
 
 * __Tree Algorthims__
   * [Tree Implementation](/Notes/Trees/binarytree.md)

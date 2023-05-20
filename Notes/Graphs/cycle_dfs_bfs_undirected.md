@@ -12,7 +12,7 @@
 ## DFS algorithm
 
 ```cpp
-    class Solution {
+class Solution {
   public:
   bool isCycle_Check(int vertex , int parent ,vector<int> adj[] , vector<int>& visited){
       
