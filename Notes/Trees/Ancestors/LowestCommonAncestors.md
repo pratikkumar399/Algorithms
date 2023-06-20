@@ -32,28 +32,38 @@ Iterative Implementation of the lca in a binary tree:
 
 ```cpp
 TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
-    if (root == nullptr || p == nullptr || q == nullptr) {
-        return nullptr;
-    }
+        if(root == p or root == q or root==nullptr) return root;
 
-    int pVal = p->val;
-    int qVal = q->val;
+        //iterative approach
+        stack<TreeNode*> st;
+        unordered_map<TreeNode*,TreeNode*> parent;
+        parent[root]=nullptr;
+        st.push(root);
 
-    TreeNode* currentNode = root;
+        while(!st.empty() and (parent.find(p)==parent.end() or parent.find(q)==parent.end())){
+            auto node=st.top();
+            st.pop();
 
-    while (currentNode != nullptr) {
-        int nodeVal = currentNode->val;
-
-        if (pVal < nodeVal && qVal < nodeVal) {
-            currentNode = currentNode->left;
-        } else if (pVal > nodeVal && qVal > nodeVal) {
-            currentNode = currentNode->right;
-        } else {
-            return currentNode;
+            if(node->left!=nullptr){
+                parent[node->left]=node;
+                st.push(node->left);
+            }
+            if(node->right!=nullptr){
+                parent[node->right]=node;
+                st.push(node->right);
+            }
         }
-    }
 
-    return nullptr;
+        unordered_set<TreeNode*> ancestors;
+        while(p!=nullptr){
+            ancestors.insert(p);
+            p=parent[p];
+        }
+
+        while(ancestors.find(q)==ancestors.end()){
+            q=parent[q];
+        }
+        return q;   
 }
 ```
 
@@ -65,6 +75,23 @@ The time complexity of this approach is O(h), where h is the height of the BST. 
 
 ```cpp
 TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
+    
+        if(root == p or root == q or root==nullptr) return root;
+
+        auto left_lca=lowestCommonAncestor(root->left,p,q);
+        auto right_lca=lowestCommonAncestor(root->right,p,q);
+
+        if(left_lca != nullptr and right_lca  != nullptr) return root;
+        return (left_lca != nullptr)? left_lca : right_lca;
+}
+
+```
+
+Recursive implementation of ancestor in a binary search tree:
+
+```cpp
+
+TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
     if (root == nullptr || p == nullptr || q == nullptr) {
         return nullptr;
     }
@@ -72,14 +99,45 @@ TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
     int pVal = p->val;
     int qVal = q->val;
     int nodeVal = root->val;
-
+    // checking if both the p and q fall on the left side of the tree
     if (pVal < nodeVal && qVal < nodeVal) {
         return lowestCommonAncestor(root->left, p, q);
-    } else if (pVal > nodeVal && qVal > nodeVal) {
+    }
+    // checking if both the p and q fall on the right side of the tree 
+    else if (pVal > nodeVal && qVal > nodeVal) {
         return lowestCommonAncestor(root->right, p, q);
-    } else {
+    }
+    // if both the p and q fall on the different sides of the tree
+     else {
         return root;
     }
+
+    return nullptr;
+}
+
+```
+
+
+
+Iterative implementation of ancestor in a binary search tree:
+
+```cpp
+
+TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
+
+     if(root == p or root == q or root==nullptr) return root;
+
+     //iterzaive approach
+     while(root!=nullptr){
+         if(root->val > p->val and root->val > q->val){
+             root = root->left;
+         }else if(root->val < p->val and root->val < q->val){
+             root = root->right;
+         }else{
+             return root;
+         }
+     }
+    return root;
 }
 
 ```
