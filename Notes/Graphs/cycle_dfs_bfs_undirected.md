@@ -5,14 +5,20 @@
 **Concept**
 
     > For finding a cycle in undirected graph , be it any of dfs or bfs traversals, we have to maintain a visited array.
+
     > Now when we do the traversal, and find the adjacent node of the current node already visited, then the case of the cycle arises : 
+
         👍It is a cycle if and only if the adjacent node has already been visited and is not the parent of the current node. 
 
 
 ## DFS algorithm
 
+> Note : The graph should not contain any back edges. A back edge connects a node to its ancestor. And each back edge in an undirected graph means that there is a cycle
+
 ```cpp
-    class Solution {
+
+// Time Complexity : O(V+E) where V is the number of vertices in the graph and E is the number of edges in the graph
+class Solution {
   public:
   bool isCycle_Check(int vertex , int parent ,vector<int> adj[] , vector<int>& visited){
       
@@ -75,7 +81,7 @@ bool detect(int source , vector<vector<int>> &graph , vector<int> &visited){
 		// this ensures that we do not visit that node again
 		q.pop();
 
-		// now go in the current node and find its adjacent node
+		// now go in the current node and find its adjacent node in the adj list
 		for(auto adjacentNode : graph[node]){
 			// if the adjacent node has not been visited then mark it as visited 
 			if(!visited[adjacentNode]){

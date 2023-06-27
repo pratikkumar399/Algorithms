@@ -33,14 +33,22 @@
         - Krushkals algorithm
    * [Topological Sort](Notes/Graphs/topologicalsort.md) 
    * Dijkstra algorithm 
-   * Kahn's algorithm
+   * [Kahn's algorithm](Notes/Graphs/Khan'sAlgoritm.md)
    * Union Find algorithm
    * Finding Cycles in graph
         - [dfs algorithm for undirected graphs](/Notes/Graphs/cycle_dfs_bfs_undirected.md)
         - [bfs algorithm for undirected graphs]()
    * Bipartite Graph(Graph Coloring)
+   * [Arrival Departure Time](/Notes/Graphs/arrival_departure_time.md)
 
 * __Tree Algorthims__
+  * [Tree Implementation](/Notes/Trees/binarytree.md)
+  * Traversals
+    * [Inorder Traversal](/Notes/Trees/Traversals/inordertraversal.md)
+    * [PreOrder Traversal](/Notes/Trees/Traversals/preordertraversal.md)
+    * [PostOrder Traversal](/Notes/Trees/Traversals/postordertraversal.md)
+    * [LevelOrder Traversal](/Notes/Trees/Traversals/levelordertraversal.md) 
+
    
 
 ## Data Structures 
