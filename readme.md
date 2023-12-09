@@ -43,6 +43,7 @@
 
 * __Tree Algorthims__
   * [Tree Implementation](/Notes/Trees/binarytree.md)
+  * [Binary Search Tree](/Notes/Trees/binarysearchtree.md)
   * Traversals
     * [Inorder Traversal](/Notes/Trees/Traversals/inordertraversal.md)
     * [PreOrder Traversal](/Notes/Trees/Traversals/preordertraversal.md)
